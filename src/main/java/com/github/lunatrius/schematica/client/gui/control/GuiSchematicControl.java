@@ -113,8 +113,9 @@ public class GuiSchematicControl extends GuiScreenBase {
         this.btnMaterials = new GuiButton(id++, 10, this.height - 70, 80, 20, this.strMaterials);
         this.buttonList.add(this.btnMaterials);
 
-        this.btnPrint = new GuiButton(id++, 10, this.height - 30, 80, 20, this.printer.isPrinting() ? this.strOn : this.strOff);
-        this.buttonList.add(this.btnPrint);
+        // Desactivado boton autobloque
+        // this.btnPrint = new GuiButton(id++, 10, this.height - 30, 80, 20, this.printer.isPrinting() ? this.strOn : this.strOff);
+        // this.buttonList.add(this.btnPrint);
 
         this.numericX.setEnabled(this.schematic != null);
         this.numericY.setEnabled(this.schematic != null);
@@ -131,7 +132,7 @@ public class GuiSchematicControl extends GuiScreenBase {
         this.btnRotateDirection.enabled = this.schematic != null;
         this.btnRotate.enabled = this.schematic != null;
         this.btnMaterials.enabled = this.schematic != null;
-        this.btnPrint.enabled = this.schematic != null && this.printer.isEnabled();
+        // this.btnPrint.enabled = this.schematic != null && this.printer.isEnabled();
 
         setMinMax(this.numericX);
         setMinMax(this.numericY);
